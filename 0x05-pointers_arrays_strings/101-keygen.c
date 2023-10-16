@@ -21,12 +21,15 @@ int main(void)
 		sum += (pass[x] + '0');
 		putchar(pass[x] + '0');
 
-		if ((2772 - sum) - '0' < 78)
+		if ((2772 - sum) < 78)
 		{
-			n = 2772 - sum - '0';
+			n = 2772 - sum;
 			sum += n;
 			putchar(n + '0');
 			break;
 		}
 	}
+	putchar('\n');
+	
+	return (0);
 }

@@ -19,6 +19,7 @@ char *leet(char *str)
 			if (str[x] == u[y])
 			{
 				str[x] = l[y];
+				break;
 			}
 		}
 	}

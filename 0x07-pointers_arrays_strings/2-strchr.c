@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strchr - locates character
@@ -8,14 +9,18 @@
  */
 char *_strchr(char *s, char c)
 {
-	int i;
+	int x;
 
-	i = 0;
-
-	while (s[i] != '\0' && s[i] != c)
+	while (1)
 	{
-		i++;
+		x = *s++;
+		if (x == c)
+		{
+			return (s - 1);
+		}
+		if (x == 0)
+		{
+			return (NULL);
+		}
 	}
-
-	return (s[i] == c ? s : NULL);
 }

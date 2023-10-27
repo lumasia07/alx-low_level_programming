@@ -1,6 +1,27 @@
 #!/bin/bash
 
-gcc -c main.h -o main.o
-ranlib libmy.a 
+gcc -c _putchar.c -o _putchar.o
+gcc -c _islower.c -o 3-islower.o
+gcc -c _isalpha.c -o 4-isalpha.o
+gcc -c _abs.c -o 6-abs.o
+gcc -c _isupper.c -o 0-isupper.o
+gcc -c _isdigit.c -o 1-isdigit.o
+gcc -c _strlen.c -o 2-strlen.o
+gcc -c _puts.c -o 3-puts.o
+gcc -c _strcpy.c -o 9-strcpy.o
+gcc -c _atoi.c -o 100-atoi.o
+gcc -c _strcat.c -o 0-strcat.o
+gcc -c _strncat.c -o 1-strncat.o
+gcc -c _strncpy.c -o 2-strncpy.o
+gcc -c _strcmp.c -o 3-strcmp.o
+gcc -c _memset.c -o 0-memset.o
+gcc -c _memcpy.c -o 1-memcpy.o
+gcc -c _strchr.c -o 2-strchr.o
+gcc -c _strspn.c -o 3-strspn.o
+gcc -c _strpbrk.c -o 4-isalpha.o
+gcc -c _strstr.c -o 5-strstr.o
+
+ar -rcs libmy.a *.o
+ranlib libmy.a
 nm libmy.a
 

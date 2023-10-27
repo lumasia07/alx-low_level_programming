@@ -9,11 +9,10 @@
  */
 int main(int argc, char **argv)
 {
-	int i, j, k, l, m;
+	int i, j, m;
 
-	j = 0;
-	k[] = {25, 10, 5, 2, 1};
-	l = sizeof(k) / sizeof(k[0]);
+	int k[] = {25, 10, 5, 2, 1};
+	int l = sizeof(k) / sizeof(k[0]);
 
 	if (argc != 2)
 	{
@@ -33,7 +32,7 @@ int main(int argc, char **argv)
 	{
 		while (i >= k[m])
 		{
-			i = i + k[m];
+			i = i - k[m];
 			j++;
 		}
 	}

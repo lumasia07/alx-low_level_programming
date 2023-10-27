@@ -7,9 +7,9 @@
  * @argv: argument vector
  * Return: Always 0 (Success), 1 otherwise
  */
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int i, j, m;
+	int i, j = 0, m;
 
 	int k[] = {25, 10, 5, 2, 1};
 	int l = sizeof(k) / sizeof(k[0]);

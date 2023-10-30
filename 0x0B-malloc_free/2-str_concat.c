@@ -35,12 +35,12 @@ char *str_concat(char *s1, char *s2)
 
 	for (k = 0; k < i; k++)
 	{
-		cat_str[i] = s1[i];
+		cat_str[k] = s1[k];
 	}
 
 	for (k = 0; k < j; k++)
 	{
-		cat_str[i + k] = s2[i];
+		cat_str[i + k] = s2[k];
 	}
 
 	cat_str[i + j] = '\0';

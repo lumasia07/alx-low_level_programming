@@ -8,7 +8,7 @@
  * @av: second argument
  * Return: pointer to new string, NULL if failed
  */
-char *argstostr(char ac, char **av)
+char *argstostr(int ac, char **av)
 {
 	int x, y, z = 0;
 	int total_len = 0;

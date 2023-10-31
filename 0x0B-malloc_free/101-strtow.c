@@ -19,17 +19,17 @@ int space(char c)
  */
 char **strtow(char *str)
 {
-	int x = 0, y = 0, wc = 0, z = 0;
+	int x = 0, wc = 0;
 	char **arr;
 
-	if (str == NULL || str == '\0')
+	if (str == NULL || *str == '\0')
 	{
 		return (NULL);
 	}
 
 	while (str[x] != '\0')
 	{
-		if ((x == 0 || space(str[x - 1]) && (!space(str[x]))))
+		if ((x == 0) || (space(str[x - 1])) && ((!space(str[x]))))
 		{
 			wc++;
 		}
@@ -56,6 +56,8 @@ char **strtow(char *str)
  */
 char begin(char *str)
 {
+	int x = 0, y = 0, z = 0;
+
 	while (str[x] != '\0')
 	{
 		if (!space(str[x]))

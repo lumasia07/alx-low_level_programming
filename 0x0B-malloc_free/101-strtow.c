@@ -29,7 +29,7 @@ char **strtow(char *str)
 
 	while (str[x] != '\0')
 	{
-		if ((x == 0) || (space(str[x - 1])) && ((!space(str[x]))))
+		if (!space(str[x]) && (x == 0 || space(str[x - 1])))
 		{
 			wc++;
 		}
@@ -57,12 +57,13 @@ char **strtow(char *str)
 char begin(char *str)
 {
 	int x = 0, y = 0, z = 0;
+	char *arr;
 
 	while (str[x] != '\0')
 	{
 		if (!space(str[x]))
 		{
-			int begin = i;
+			int begin = x;
 
 			while (!space(str[x]) && str[x])
 			{

@@ -33,17 +33,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (conc_str == NULL)
 		return (NULL);
 
-	x = 0;
-	y = 0;
-
-	while (x < l1)
+	for (x = 0; x < l1; x++)
+	{
 		conc_str[x] = s1[x];
-		x++;
-
-	while (y < n)
+	}
+	for (y = 0; y < n; y++)
+	{
 		conc_str[x + y] = s2[y];
-		y++;
-
+	}
 	conc_str[x + y] = '\0';
 
 	return (conc_str);

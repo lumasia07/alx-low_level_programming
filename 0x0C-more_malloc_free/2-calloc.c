@@ -31,8 +31,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *arr;
 
-	unsigned int x;
-
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 

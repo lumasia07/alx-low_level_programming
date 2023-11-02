@@ -9,13 +9,13 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *assigned;
+	void *assi_gned;
 
-	assigned = malloc(b);
-	
-	if (assigned == NULL)
+	assi_gned = malloc(b);
+
+	if (assi_gned == NULL)
 	{
 		exit(98);
 	}
-	return (assigned);
+	return (assi_gned);
 }

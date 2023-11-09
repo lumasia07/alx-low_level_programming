@@ -12,11 +12,12 @@ void print_all(const char * const format, ...)
 	char cf;
 
 	va_start(pr, format);
+
 	while (format && format[i])
 	{
 		cf = format[i];
 
-		switch (format[i])
+		switch (cf)
 		{
 			case 'c':
 				printf("%c", va_arg(pr, int));

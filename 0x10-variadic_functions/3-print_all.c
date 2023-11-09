@@ -8,16 +8,12 @@ void print_all(const char * const format, ...)
 {
 	va_list pr;
 	char *s;
-	char cf;
 	unsigned int i = 0;
-
+	
 	va_start(pr, format);
-
 	while (format && format[i])
 	{
-		cf = format[i];
-
-		switch (cf)
+		switch (format[i])
 		{
 			case 'c':
 				printf("%c", va_arg(pr, int));
@@ -30,11 +26,16 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				s = va_arg(pr, char *);
-
-				if (s)
-					s = "(nil)";
-				printf("%s", s);
-				break;
+				if (s == NULL)
+				{
+					printf("(nil)");
+					break;
+				}
+				else
+				{
+					printf("%s", s);
+					break;
+				}
 			default:
 				i++;
 				continue;
@@ -47,6 +48,5 @@ void print_all(const char * const format, ...)
 	}
 
 	printf("\n");
-
 	va_end(pr);
 }

@@ -33,6 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (count <= 0)
 	{
 		free(bf);
+		fclose(f);
 		return (0);
 	}
 
@@ -43,7 +44,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	free(bf);
 
 	if (counted != count)
+	{
+		fclose(f);
 		return (0);
-
+	}
+	fclose(f);
 	return (count);
 }

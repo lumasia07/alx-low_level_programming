@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "%s\n", argv[0]);
+		dprintf(STDERR_FILENO, "Error%s\n", argv[0]);
 		exit(97);
 	}
 
@@ -37,7 +37,7 @@ int _source(const char *filename)
 
 	if (f_des == -1)
 	{
-		dprintf(STDERR_FILENO, "%s\n", filename);
+		dprintf(STDERR_FILENO, "Error%s\n", filename);
 		exit(98);
 	}
 	return (f_des);
@@ -55,7 +55,7 @@ int _dest(const char *filename)
 
 	if (f_des == -1)
 	{
-		dprintf(STDERR_FILENO, "%s\n", filename);
+		dprintf(STDERR_FILENO, "Error%s\n", filename);
 		exit(99);
 	}
 	return (f_des);

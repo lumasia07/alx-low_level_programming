@@ -36,13 +36,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		fclose(f);
 		return (0);
 	}
-
 	bf[count] = '\0';
 
 	counted = write(STDOUT_FILENO, bf, count);
 
 	free(bf);
-
 	if (counted != count)
 	{
 		fclose(f);

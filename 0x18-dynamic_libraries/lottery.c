@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include <string.h>
 
-int so_rand()
+int rand()
 {
 	static int mp = -1;
 
